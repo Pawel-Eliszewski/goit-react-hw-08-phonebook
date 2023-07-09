@@ -1,10 +1,20 @@
+.container {
+  position: fixed;
+  top: 22vh;
+  left: 10vw;
+  border-radius: 12px;
+  background-color: rgb(174, 174, 174);
+  padding-inline: 20px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  width: 250px;
+}
+
 .form {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  border: 1px solid black;
-  padding: 10px;
-  width: 300px;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
 }
 
 .label {
@@ -13,12 +23,30 @@
 }
 
 .input {
-  width: 150px;
+  width: 180px;
+  border: none;
+  border-radius: 4px;
+  padding-left: 10px;
+  height: 25px;
+  margin-block: 10px;
 }
 
 .btn {
-  width: max-content;
-  border: 1px solid gray;
-  border-radius: 5px;
+  width: 36px;
+  height: 36px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
   cursor: pointer;
+}
+
+.icon {
+  width: 36px;
+  height: 36px;
+  transform: scale(1);
+}
+
+.icon:hover {
+  transform: scale(1.2);
 }

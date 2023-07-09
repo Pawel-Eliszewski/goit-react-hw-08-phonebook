@@ -19,20 +19,33 @@ export const RegisterForm = () => {
   };
 
   return (
-    <form className={css.form} onSubmit={handleSubmit} autoComplete="off">
-      <label className={css.label}>
-        Username
-        <input type="text" name="name" />
-      </label>
-      <label className={css.label}>
-        Email
-        <input type="email" name="email" />
-      </label>
-      <label className={css.label}>
-        Password
-        <input type="password" name="password" />
-      </label>
-      <button type="submit">Register</button>
-    </form>
+    <div className={css.container}>
+      <form className={css.form} onSubmit={handleSubmit} autoComplete="off">
+        <label className={css.label} htmlFor="name">
+          Username
+          <input className={css.input} id="name" type="text" name="name" />
+        </label>
+        <label className={css.label} htmlFor="email">
+          Email
+          <input className={css.input} id="email" type="email" name="email" />
+        </label>
+        <label className={css.label} htmlFor="password">
+          Password
+          <input
+            className={css.input}
+            id="password"
+            type="password"
+            name="password"
+          />
+        </label>
+        <button className={css.btn} type="submit">
+          <img
+            className={css.icon}
+            src={require('../../images/userIconRed.png')}
+            alt="Register user"
+          />
+        </button>
+      </form>
+    </div>
   );
 };

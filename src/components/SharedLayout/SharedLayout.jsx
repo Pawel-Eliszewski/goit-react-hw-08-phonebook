@@ -2,10 +2,11 @@ import { Outlet } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { AppBar } from '../AppBar/AppBar';
 import { Suspense } from 'react';
+import css from './SharedLayout.module.css';
 
 export const SharedLayout = () => {
   return (
-    <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 16px' }}>
+    <div className={css.main}>
       <AppBar />
       <Suspense fallback={null}>
         <Outlet />

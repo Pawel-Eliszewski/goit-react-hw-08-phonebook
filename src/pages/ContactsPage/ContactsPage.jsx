@@ -1,13 +1,18 @@
+import { ContactsBar } from 'components/ContactsBar/ContactsBar';
 import { ContactsForm } from 'components/ContactsForm/ContactsForm';
-import { ContactsFilter } from 'components/ContactsFilter/ContactsFilter';
 import { ContactsList } from 'components/ContactsList/ContactsList';
+import { ContactsFilter } from 'components/ContactsFilter/ContactsFilter';
+import css from './ContactsPage.module.css';
 
-export default function Contacts() {
+export default function ContactsPage() {
   return (
-    <div className="main">
-      <ContactsForm />
-      <ContactsFilter />
-      <ContactsList />
-    </div>
+    <>
+      <ContactsBar />
+      <div className={css.main}>
+        <ContactsForm />
+        <ContactsList />
+        <ContactsFilter />
+      </div>
+    </>
   );
 }

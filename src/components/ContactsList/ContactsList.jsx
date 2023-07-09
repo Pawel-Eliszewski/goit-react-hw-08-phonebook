@@ -27,26 +27,39 @@ export const ContactsList = () => {
   const handleDelete = id => dispatch(deleteContact(id));
 
   return (
-    <ul>
-      <h2>Contacts</h2>
-      {error && <p>{error}</p>}
-      {contacts.length > 0 ? (
-        filteredContacts.map(contact => {
-          return (
-            <li key={contact.id}>
-              {`${contact.name}: ${contact.number}`}
-              <button
-                className={css.btn}
-                onClick={() => handleDelete(contact.id)}
-              >
-                Delete
-              </button>
-            </li>
-          );
-        })
-      ) : (
-        <p>Your Phonebook is empty</p>
-      )}
-    </ul>
+    <div className={css.container}>
+      <ul className={css.list}>
+        {error && <p>{error}</p>}
+        {contacts.length > 0 ? (
+          filteredContacts.map(contact => {
+            return (
+              <div className={css.wrapper} key={contact.id}>
+                <li className={css.name}>
+                  {`${contact.name}`}{' '}
+                  <dt>
+                    <a
+                      className={css.phone}
+                      href={`tel:${contact.number}`}
+                    >{`${contact.number}`}</a>
+                  </dt>
+                </li>
+                <button
+                  className={css.btn}
+                  onClick={() => handleDelete(contact.id)}
+                >
+                  <img
+                    className={css.icon}
+                    src={require('../../images/deleteIconRed.png')}
+                    alt="Delete contact"
+                  />
+                </button>
+              </div>
+            );
+          })
+        ) : (
+          <h4>Your Phonebook is empty</h4>
+        )}
+      </ul>
+    </div>
   );
 };

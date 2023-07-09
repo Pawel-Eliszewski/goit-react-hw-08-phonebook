@@ -1,9 +1,33 @@
 .wrapper {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
+    padding-right: 10vw;
 }
 
 .username {
+    text-align: center;
     font-weight: 700;
+    color: beige;
+    margin: 0 auto;
+}
+
+.btn {
+    width: 36px;
+    height: 36px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.icon {
+    width: 36px;
+    height: 36px;
+    transform: scale(1);
+}
+
+.icon:hover {
+    transform: scale(1.2);
 }

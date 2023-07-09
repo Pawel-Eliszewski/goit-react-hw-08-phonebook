@@ -22,37 +22,42 @@ export const ContactsForm = () => {
   };
 
   return (
-    <>
-      <h1>Phonebook</h1>
+    <div className={css.container}>
       <form type="submit" className={css.form} onSubmit={handleSubmit}>
-        <label className={css.label} htmlFor="name">
-          Name
-        </label>
-        <input
-          className={css.input}
-          id="name"
-          type="text"
-          name="name"
-          placeholder="Enter name"
-          title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-          required
-        />
-        <label className={css.label} htmlFor="phone">
-          Number
-        </label>
-        <input
-          className={css.input}
-          id="phone"
-          type="tel"
-          name="number"
-          placeholder="Enter phone number"
-          title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-          required
-        />
+        <div className={css.wrapper}>
+          <label className={css.label} htmlFor="name">
+            Name
+          </label>
+          <input
+            className={css.input}
+            id="name"
+            type="text"
+            name="name"
+            placeholder="Enter name"
+            title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+            required
+          />
+          <label className={css.label} htmlFor="phone">
+            Number
+          </label>
+          <input
+            className={css.input}
+            id="phone"
+            type="tel"
+            name="number"
+            placeholder="Enter phone number"
+            title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+            required
+          />
+        </div>
         <button type="submit" className={css.btn}>
-          Add contact
+          <img
+            className={css.icon}
+            src={require('../../images/addContactIconRed.png')}
+            alt="Add new contact"
+          />
         </button>
       </form>
-    </>
+    </div>
   );
 };

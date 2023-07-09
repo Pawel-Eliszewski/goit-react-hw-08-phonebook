@@ -1,12 +1,9 @@
+import css from './HomePage.module.css';
+
 export default function HomePage() {
   return (
-    <div>
-      <h1>
-        Phonebook Homepage{' '}
-        <span role="img" aria-label="Greeting icon">
-          💁‍♀️
-        </span>
-      </h1>
-    </div>
+    <section className={css.hero}>
+      <h1 className={css.title}>Phone Book</h1>
+    </section>
   );
 }

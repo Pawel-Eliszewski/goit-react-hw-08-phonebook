@@ -11,9 +11,9 @@ export const ContactsFilter = () => {
   };
 
   return (
-    <div className={css.filter}>
+    <div className={css.container}>
       <label className={css.label} htmlFor="filter">
-        Find contacts by name
+        Search contact by name
       </label>
       <input
         onChange={handleInput}
@@ -22,6 +22,7 @@ export const ContactsFilter = () => {
         type="text"
         name="name"
         placeholder="Enter name"
+        autoComplete="off"
         title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
         required
       />

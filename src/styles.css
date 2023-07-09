@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: lightgrey;
 }
 
 code {
@@ -12,12 +13,6 @@ code {
     monospace;
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  align-items: left;
-  padding: 30px;
-  font-size: 40;
-  color: #010101;
+.active {
+  color: #e84a5f;
 }

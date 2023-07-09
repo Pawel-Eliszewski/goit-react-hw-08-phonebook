@@ -1,7 +1,17 @@
-.filter {
+.container {
+    position: fixed;
+    top: 22vh;
+    right: 10vw;
+    border-radius: 12px;
+    background-color: rgb(174, 174, 174);
+    padding-inline: 20px;
+    padding-block: 15px;
     display: flex;
+    gap: 10px;
     flex-direction: column;
-    gap: 7px;
+    width: 250px;
+    min-height: fit-content;
+    justify-content: space-between;
 }
 
 .label {
@@ -10,5 +20,9 @@
 }
 
 .input {
-    width: 150px;
+    width: 240px;
+    border: none;
+    border-radius: 4px;
+    padding-left: 10px;
+    height: 25px;
 }
